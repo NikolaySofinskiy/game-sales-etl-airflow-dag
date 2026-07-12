@@ -8,7 +8,7 @@ from airflow.operators.python import get_current_context
 
 
 default_args = {
-    'owner': 'nikolaj-sofinskij-pwt6989',
+    'owner': 'nikolaj-sofinskij',
     'depends_on_past': False,
     'retries': 2,
     'retry_delay': timedelta(minutes=5),
