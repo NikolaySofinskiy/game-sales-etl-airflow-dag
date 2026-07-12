@@ -17,7 +17,7 @@ default_args = {
 
 
 # Задаем декоратор для DAG
-@dag(dag_id='nikolaj-sofinskij', default_args=default_args, schedule_interval='0 12 * * *', catchup=False)
+@dag(dag_id='video_game_sales_analytics', default_args=default_args, schedule_interval='0 12 * * *', catchup=False)
 def vgsales_analysis():
     @task()
     def get_data():
