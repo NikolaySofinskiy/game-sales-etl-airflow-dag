@@ -59,7 +59,7 @@ def vgsales_analysis():
         # Восстанавливаем DataFrame из переданной строки
         data = pd.read_csv(StringIO(data_csv))
     
-        # Находим платформы с наибольшим количеством игр, которые продались более чем миллионным тиражом в Северной Америке
+        # Находим платформы с наибольшим количеством игр, которые продались более чем миллионным тиражом в Северной Америке в 2011 году
         platform_sales = data.query('Year == 2011 and NA_Sales > 1').groupby('Platform', as_index=False).agg(number=('NA_Sales', 'count'))
         max_sales_platform = platform_sales['number'].max()
         top_platform_list = platform_sales.query('number == @max_sales_platform')['Platform'].tolist()
